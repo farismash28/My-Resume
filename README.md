@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# Faris Mashaleh — Resume Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cyberpunk-themed personal resume website built with Vite, React, TypeScript, and Tailwind CSS. Deployed to GitHub Pages via GitHub Actions.
 
-Currently, two official plugins are available:
+**Live site:** https://farismash28.github.io/My-Resume/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Vite** + **React** + **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion** — scroll-triggered animations
+- **react-type-animation** — typewriter effect
+- **lucide-react** — icons
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Cyberpunk / neon design with `#00f5ff` cyan and `#a855f7` purple accents
+- Animated gradient orb background + scanline overlay
+- Typewriter hero cycling through roles
+- Scroll-triggered fade-in animations on every section
+- Vertical timeline for experience
+- Responsive project card grid
+- Skill bars with animated fill
+- Fixed navbar with blur backdrop
+- CI/CD via GitHub Actions → `gh-pages` branch
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Experience.tsx
+│   ├── Projects.tsx
+│   ├── Skills.tsx
+│   └── Contact.tsx
+├── data/
+│   └── resume.ts   ← edit your content here
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Updating Content
+
+All resume content (bio, experience, projects, skills, contact links) lives in `src/data/resume.ts`. Edit that file and push — the site redeploys automatically.
+
+## Deployment
+
+Pushing to `main` triggers the GitHub Actions workflow which builds the site and publishes `dist/` to the `gh-pages` branch.
+
+Make sure GitHub Pages is set to serve from the `gh-pages` branch in your repo settings.
