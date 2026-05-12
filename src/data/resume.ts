@@ -1,13 +1,14 @@
 export const resumeData = {
   name: 'Faris Mashaleh',
-  title: 'IT Professional & Data Analyst',
+  title: 'Data Engineer / Data Analyst',
   tagline: 'I am the Blacksmith, AI is my Hammer, and the world is my Anvil.',
-  bio: `Detail-oriented IT professional and aspiring Business/Data Analyst with a strong foundation in
+  bio: `Detail-oriented IT professional and aspiring Data Engineer / Data Analyst with a strong foundation in
     data analysis, reporting, and process improvement. Experienced translating operational data into
     actionable insights — from consolidating P&L and sales reports to tracking KPIs, forecasting demand,
     and building data-driven workflows across retail and technical environments. Proficient in SQL, Python,
-    Power BI, Excel, and cloud platforms (Azure, AWS). Background in systems thinking,
-    hardware/software troubleshooting, and cross-functional collaboration.`,
+    Pandas, Power BI, Excel, and cloud platforms (Azure, AWS). Background in systems thinking,
+    project management, and cross-functional collaboration. Open to relocation anywhere in the
+    continental United States.`,
   contact: {
     email: 'Farismash28@gmail.com',
     github: 'https://github.com/farismash28',
@@ -31,14 +32,6 @@ export const resumeData = {
       tags: ['Fiber Optics', 'Networking', 'VLANs', 'ONT/Gateway', 'WDM'],
     },
     {
-      role: 'PC Builder & Repair Specialist',
-      company: 'Freelance  •  Dallas, TX / St. Louis, MO',
-      period: 'Sep 2022 – Present',
-      description:
-        'Build custom desktop PCs end-to-end: component selection, assembly, cable management, BIOS/UEFI configuration, and OS installation. Diagnose and resolve hardware and software issues including thermal throttling, power delivery, and driver conflicts. Perform drive imaging, backup/recovery workflows, malware remediation, and configure multi-boot environments.',
-      tags: ['PC Building', 'Hardware', 'Windows', 'Linux', 'Troubleshooting'],
-    },
-    {
       role: 'Restaurant Manager',
       company: 'King Grill  •  Overland, MO',
       period: 'Sep 2024 – Aug 2025',
@@ -54,20 +47,12 @@ export const resumeData = {
         'Progressed from Cashier to Regional Manager overseeing multi-store operations, staffing, and P&L. Consolidated and analyzed sales, labor, and expense data in Excel; produced monthly/quarterly reports for ownership. Managed multi-department inventory using cycle count data and vendor analytics. Provided IT support and maintained local servers and network infrastructure across store locations.',
       tags: ['Excel', 'Data Analysis', 'Inventory', 'IT Support', 'Operations'],
     },
-    {
-      role: 'Phone & Computer Repair Technician',
-      company: 'Communication Depot  •  St. Louis, MO',
-      period: 'May 2019 – Aug 2020',
-      description:
-        'Troubleshot smartphone and computer motherboards at the component level using specialized test equipment. Resolved hardware and software issues across macOS/iOS and Windows devices; provided in-store and remote support via TeamViewer. Remediated malware and ransomware-compromised devices and guided customers through step-by-step troubleshooting.',
-      tags: ['Hardware Repair', 'macOS', 'Windows', 'Remote Support', 'Customer Service'],
-    },
   ],
   projects: [
     {
       name: 'AMMS — Asset Maintenance Management System',
       description:
-        'Led a team to design and deliver a full-stack web application for a lawn care business, replacing manual spreadsheet-based equipment tracking with a digital maintenance workflow. Defined 20+ features across 4 project phases including asset registry, PM scheduling, work order lifecycle, and reporting. Deployed on Render.com with Gunicorn/PostgreSQL.',
+        'Led a team to design and deliver a full-stack web application for a lawn care business, replacing manual spreadsheet-based equipment tracking with a digital maintenance workflow. Defined 20+ features across 4 project phases (Waterfall/Agile) including asset registry, PM scheduling, work order lifecycle, and reporting. Deployed on Render.com with Gunicorn/PostgreSQL.',
       tags: ['Python', 'Flask', 'React 19', 'TypeScript', 'PostgreSQL', 'Project Management'],
       github: '',
       live: '',
@@ -79,6 +64,41 @@ export const resumeData = {
       tags: ['Power BI', 'SQL', 'Python', 'Azure SQL', 'ETL', 'Data Analytics'],
       github: '',
       live: '',
+    },
+    {
+      name: 'Presentation Evaluation Tool',
+      description:
+        'Desktop application enabling instructors to score and persist student team presentations against a four-criterion rubric (technicality, usefulness, clarity, overall), with scores mapped to a letter-grade scale. Designed a normalized Apache Derby schema integrated via JDBC; implemented bidirectional DB sync including dynamic dropdowns, live grade-average calculation, and full submit/retrieve lifecycle.',
+      tags: ['Java', 'Java Swing', 'JDBC', 'Apache Derby', 'Maven'],
+      github: '',
+      live: '',
+    },
+    {
+      name: 'Payroll Processing System',
+      description:
+        'Menu-driven payroll application supporting three employee compensation models (Hourly, Salaried, Commission) with gross pay, tax, and net pay calculations. Modeled an inheritance hierarchy mirroring table-per-type schema design; implemented Java object serialization for cross-session data persistence and input validation with re-prompt loops.',
+      tags: ['Java', 'OOP', 'Serialization', 'Data Modeling'],
+      github: '',
+      live: '',
+    },
+    {
+      name: 'Interplanetary Route Validator',
+      description:
+        'Graph-based system that validates pilot flight routes across a network of planets and calculates total payload weights from multi-file input data. Built a custom adjacency-list graph from scratch, a multi-file ingest pipeline, and a route-validation engine that traverses the graph to verify connections and flag invalid routes.',
+      tags: ['C++', 'Data Structures', 'Graph Algorithms', 'File I/O'],
+      github: '',
+      live: '',
+    },
+  ],
+  events: [
+    {
+      name: "Women's Hackathon 2026 – UMSL",
+      role: 'Logistics Coordinator & Solutions Owner',
+      period: '2026',
+      link: 'https://umslwomenshack.web.app/',
+      description:
+        'Managed a $3,000 event budget and secured an additional $1,500 in supplemental funding ($4,500 total). Oversaw end-to-end procurement and delivery of all event materials. Acted as primary cross-functional liaison between logistics, operations, and marketing teams. Scaled attendance to 60+ participants — the highest turnout in Women\'s Hack at UMSL history — and supported delivery of a full-day hackathon with keynote speakers, mentors, and $1,125 in prize awards.',
+      tags: ['Event Management', 'Budget Management', 'Cross-functional Leadership', 'Logistics'],
     },
   ],
   education: {
@@ -95,20 +115,19 @@ export const resumeData = {
     { name: 'Apple Certified Technician', status: 'Active' },
     { name: 'OSHA Certified', status: 'Active' },
     { name: 'CPR Certified', status: 'Active' },
-    { name: 'CompTIA Security+', status: 'Expected Summer 2026' },
   ],
   skills: [
     { name: 'Python', level: 90 },
     { name: 'SQL', level: 88 },
     { name: 'Power BI', level: 80 },
     { name: 'Excel / Data Analysis', level: 88 },
+    { name: 'Pandas / Data Modeling', level: 80 },
     { name: 'Azure', level: 75 },
     { name: 'AWS', level: 72 },
     { name: 'Windows', level: 95 },
     { name: 'Linux', level: 82 },
-    { name: 'Hardware & PC Building', level: 92 },
-    { name: 'Networking', level: 80 },
-    { name: 'Business Analysis', level: 82 },
-    { name: 'HTML / APIs', level: 75 },
+    { name: 'Business Analysis', level: 84 },
+    { name: 'Java / C++', level: 72 },
+    { name: 'Agile / Waterfall', level: 80 },
   ],
 };
